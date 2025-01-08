@@ -31,6 +31,9 @@ my_website_project
 |  | |__main.css
 |  |
 |  |__js
+|  |
+|  |__pic
+|    |__gitproject1.png
 |
 |__templates
 |  |__about.html
