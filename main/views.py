@@ -13,3 +13,12 @@ def handler404(request, exception):
 
 def handler500(request):
     return render(request, '500.html', status=500)
+
+def privacy_policy(request):
+    return render(request, 'privacyPolicy.html')
+
+def contacts(request):
+    return render(request, 'contacts.html')
+
+def tos(request):
+    return render(request, 'tos.html')
