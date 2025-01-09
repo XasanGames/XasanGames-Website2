@@ -44,7 +44,7 @@
         <p>My projects are:</p>
         <ul>
             <li><a href="/">XasanGames Website</a></li>
-            <img src="{% static 'pic/gitproject.png' %}" alt="gitprojectPic">
+            <img src="{% static 'pic/gitproject1.png' %}" alt="gitprojectPic">
         </ul>
     </section>
     <br>
@@ -110,5 +110,22 @@
             <a href="/contact">Contact</a>
         </div>
     </footer>
+    <button id="srollToTopoBtn">Scroll to Top</button>
+    <script>
+        // Показать кнопку при прокрутке вниз на 100px
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Прокрутка страницы вверх при нажатии на кнопку
+        document.getElementById("scrollToTopBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 </html>
