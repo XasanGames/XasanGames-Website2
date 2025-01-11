@@ -1,2 +1,172 @@
-<!-- This is the login page template -->
-<!-- The login in development -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        html {
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            top: 38%;
+            left: 33%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #181a1b;
+        }
+
+        header {
+            background-color: #262A2B;
+            font-family: 'Open Sans', sans-serif;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0 10px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: left;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+
+        .login-register {
+            position: absolute;
+            right: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 100px;
+            color: #fff;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        footer {
+            background-color: #262A2B;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contacts</a></li>
+                <div class="login-register">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <footer>
+        <p>&copy; 2025 XasanGames Website</p>
+        <div class="footer-links">
+            <a href="/tos">Terms of Service</a>
+            <a href="/privacyPolicy">Privacy Policy</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
