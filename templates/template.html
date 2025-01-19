@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - XasanGames Website</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/template.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="login-register">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </div>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <p>&copy; 2025 XasanGames Website</p>
+        <div class="footer-links">
+            <a href="/tos">Terms of Service</a>
+            <a href="/privacyPolicy">Privacy Policy</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" style="position: absolute; bottom: 20px; right: 20px; background-color: #333; color: #fff;">Scroll To Top</button>
+    <script>
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Прокрутка страницы вверх при нажатии на кнопку
+        document.getElementById("scrollToTopBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
